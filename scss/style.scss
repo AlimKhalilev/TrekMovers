@@ -4,6 +4,8 @@
 @import "header";
 @import "footer";
 
+// === Promo ===
+
 .section-promo {
     background-image: url(/dist/img/promo-background.webp);
     background-size: cover;
@@ -43,6 +45,7 @@
             @media ($media_xl) {
                 font-size: 58px;
                 width: 550px;
+                line-height: 75px;
             }
         }
 
@@ -57,6 +60,7 @@
             @media ($media_xl) {
                 font-size: 16px;
                 width: 215px;
+                line-height: 28px;
             }
         }
 
@@ -185,3 +189,128 @@
         }
     }
 }
+
+// === / Promo ===
+
+// === Service ===
+
+.section-service {
+    margin-bottom: 120px;
+
+    h1 {
+        @include font-header;
+        font-size: 45px;
+        line-height: 50px;
+        text-align: center;
+    }
+
+    .section-inner {
+
+    }
+
+    &-collapse {
+        height: 50px;
+        width: 100%;
+        background-color: #E5DDD1;
+        border-radius: 25px;
+        margin: 50px 0 40px 0;
+        
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+
+        &-item {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            &.active {
+                background: #5C524B;
+                border-radius: 25px;
+
+                span {
+                    color: #fff;
+                }
+            }
+
+            span {
+                @include font-secondary;
+                font-size: 20px;
+                line-height: 37px;
+                color: #666666;
+            }
+        }
+    }
+
+    &-container {
+        padding: 0 30px;
+        display: grid;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 450px 1fr;
+        grid-auto-flow: column;
+        grid-row-gap: 30px;
+
+        &-block {
+
+            &.image {
+                text-align: center;
+                grid-row-start: 1;
+                grid-row-end: 4;
+            }
+            &-header {
+                display: flex;
+                align-items: center;
+                margin-bottom: 20px;
+
+                h2 {
+                    @include font-header;
+                    font-size: 19px;
+                    line-height: 30px;
+                    margin-left: 35px;
+                }
+
+                &.invert {
+                    justify-content: flex-end;
+
+                    h2 {
+                        margin-right: 35px;
+                        order: -1;
+                    }
+                }
+            }
+
+            &-text {
+                font-size: 14px;
+                line-height: 26px;
+                color: #827A70;
+            }
+        }
+    }
+}
+
+// === / Service ===
+
+// === Brands ===
+
+.section-brands {
+    margin-bottom: 100px;
+
+    .section-inner {
+
+    }
+
+    h1 {
+        @include font-header;
+        font-size: 45px;
+        line-height: 50px;
+        text-align: center;
+        margin-bottom: 50px;
+    }
+    
+    &-logos {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+// === / Brands ===
