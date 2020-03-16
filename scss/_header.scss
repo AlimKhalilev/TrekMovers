@@ -1,0 +1,150 @@
+// === Mixins ===
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+@mixin font-secondary {
+    font-family: 'Poppins', sans-serif;
+}
+
+@mixin font-header {
+    @include font-secondary;
+    color: $color_header;
+    font-weight: bold;
+}
+
+button, input[type="submit"] {
+    @include font-secondary;
+    background-color: $color_yellow;
+    color: #fff;
+    border-radius: 30px;
+    font-weight: bold;
+    font-size: 14px;
+    border: none;
+    padding: 10px 40px;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+// === / Mixins ===
+
+// === / Header ===
+
+.section-header {
+
+    .section-inner {
+        height: 100px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &-logo {
+        img {
+            height: 25px;
+        }
+    }
+
+    &-info {
+        display: flex;
+        align-items: center;
+
+        &-phone {
+            align-self: flex-start;
+            margin-top: 8px;
+        }
+
+        &-text {
+            margin: 0 25px 0 20px;
+
+            &-top {
+                @include font-header;
+                font-size: 24px;
+                line-height: 36px;
+            }
+
+            &-bottom {
+                @include font-header;
+                font-size: 12px;
+                line-height: 12px;
+            }
+        }
+
+        &-button {
+
+        }
+    }
+}
+// === / Header ===
+
+
+// === SubHeader ===
+
+.section-subheader {
+    background-color: $color_section;
+
+    .section-inner {
+        height: 80px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &-nav {
+        ul {
+            display: flex;
+
+            li {
+                &:not(:last-child) {
+                    margin-right: 40px;
+                }
+
+                a {
+                    @include font-header;
+                    font-size: 14px;
+                    line-height: 21px;
+                    text-transform: uppercase;
+                    cursor: pointer;
+                    text-decoration: none;
+
+                    padding: 28px 0;
+                    border-bottom: 2px solid transparent;
+                    transition: 0.3s ease-in-out;
+
+                    &:hover {
+                        border-bottom: 2px solid $color_yellow;
+                    }
+                }
+            }
+        }
+    }
+
+    &-location {
+
+        &-text {
+            display: flex;
+            @include font-header;
+            color: $color_subheader;
+            font-size: 14px;
+            line-height: 21px;
+
+            &-block {
+                display: flex;
+                color: #AB9478;
+                margin-left: 20px;
+                cursor: pointer;
+
+                img {
+                    margin-right: 5px;
+                }
+
+                span {
+                    border-bottom: 1px solid #AB9478;
+                }
+            }
+        }
+    }
+}
+
+// === / SubHeader ===

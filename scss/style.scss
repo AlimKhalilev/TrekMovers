@@ -1,3 +1,57 @@
 @import "normalize";
 @import "colors";
 @import "grid";
+@import "header";
+@import "footer";
+
+.section-promo {
+    position: relative;
+
+    .section-inner {
+
+    }
+
+    &-background {
+        position: absolute;
+        left: 0;
+        width: 100%;
+        z-index: -1;
+    }
+
+    &-description {
+        h1 {
+            @include font-header;
+            color: #fff;
+            font-size: 65px;
+            line-height: 85px;
+            width: 600px;
+        }
+
+        p {
+            @include font-secondary;
+            color: #fff;
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 32px;
+            width: 240px;
+        }
+
+        &-video {
+            display: flex;
+            align-items: center;
+            p {
+                @include font-secondary;
+                color: $color_yellow;
+                font-weight: 400;
+                font-size: 18px;
+                line-height: 32px;
+                width: auto;
+                margin-right: 20px;
+            }
+
+            img {
+                width: 50px;
+            }
+        }
+    }
+}
