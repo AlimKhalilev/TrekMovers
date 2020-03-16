@@ -5,26 +5,45 @@
 @import "footer";
 
 .section-promo {
-    position: relative;
+    background-image: url(/dist/img/promo-background.webp);
+    background-size: cover;
+    height: 650px;
+    background-position: left center;
+    background-repeat: no-repeat;
+    margin-bottom: 140px;
 
-    .section-inner {
-
+    @media ($media_xl) {
+        height: 550px;
     }
 
-    &-background {
-        position: absolute;
-        left: 0;
-        width: 100%;
-        z-index: -1;
+    .section-inner {
+        height: inherit;
+        display: flex;
+        justify-content: space-between;
     }
 
     &-description {
+        height: inherit;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 65px 0;
+
+        @media ($media_xl) {
+            padding: 50px 0;
+        }
+
         h1 {
             @include font-header;
             color: #fff;
             font-size: 65px;
             line-height: 85px;
             width: 600px;
+
+            @media ($media_xl) {
+                font-size: 58px;
+                width: 550px;
+            }
         }
 
         p {
@@ -34,6 +53,11 @@
             font-size: 18px;
             line-height: 32px;
             width: 240px;
+
+            @media ($media_xl) {
+                font-size: 16px;
+                width: 215px;
+            }
         }
 
         &-video {
@@ -47,10 +71,116 @@
                 line-height: 32px;
                 width: auto;
                 margin-right: 20px;
+
+                @media ($media_xl) {
+                    font-size: 16px;
+                }
             }
 
             img {
                 width: 50px;
+            }
+        }
+    }
+
+    &-card {
+        background: #FFFFFF;
+        border-radius: 10px;
+        padding: 40px;
+        margin: 65px 0;
+        width: 430px;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        @media ($media_xl) {
+            width: 380px;
+            margin: 50px 0;
+        }
+
+        &-top {
+            h2 {
+                @include font-header;
+                font-size: 24px;
+                line-height: 36px;
+                text-align: center;
+                margin-bottom: 25px;
+            }
+
+            p {
+                @include font-header;
+                font-size: 14px;
+                line-height: 21px;
+                color: #9F9F9F;
+
+                span {
+                    color: #5C524B;
+                    text-decoration: underline;
+                }
+            }
+
+            &-form {
+                input {
+                    margin-bottom: 35px;
+                    width: 100%;
+
+                    @media ($media_xl) {
+                        margin-bottom: 25px;
+                    }
+                }
+
+                input::placeholder {
+                    color: #9F9F9F;
+                }
+
+                input[type="text"] {
+                    border: none;
+                    border-bottom: 1px solid #D5D5D5;
+                    padding: 10px 25px 10px 0;;
+                    outline: none; // убрать!
+                }
+
+                input[type="text"]:focus {
+                    border-bottom: 1.45px solid $color_yellow;
+                }
+
+                input[type="submit"] {
+                    padding: 18px 40px;
+                }
+
+                &-search {
+                    display: flex;
+                    justify-content: space-between;
+
+                    &-input {
+                        width: 47%;
+                        position: relative;
+                    }
+
+                    &-input::before {
+                        content: '';
+                        position: absolute;
+                        background-image: url(/dist/img/search.svg);
+                        top: 10px;
+                        right: 5px;
+                        width: 16px;
+                        height: 16px;
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+
+        &-bottom {
+            @include font-secondary;
+            color: $color_header;
+            font-size: 14px;
+            line-height: 21px;
+
+            a {
+                text-decoration: none;
+                color: $color_yellow;
             }
         }
     }

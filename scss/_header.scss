@@ -2,6 +2,7 @@
 
 body {
     font-family: 'Roboto', sans-serif;
+    font-size: 16px;
 }
 
 @mixin font-secondary {
@@ -22,7 +23,7 @@ button, input[type="submit"] {
     font-weight: bold;
     font-size: 14px;
     border: none;
-    padding: 10px 40px;
+    padding: 12px 40px;
     cursor: pointer;
     text-transform: uppercase;
 }
