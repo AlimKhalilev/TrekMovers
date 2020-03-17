@@ -28,6 +28,24 @@ button, input[type="submit"] {
     text-transform: uppercase;
 }
 
+.lSAction > a {
+    background-image: url(/dist/img/controls.svg);
+    opacity: 1;
+    width: 46px;
+    height: 46px;
+    margin-top: -90px;
+
+    &.lSPrev {
+        transform: rotate(180deg);
+        left: -100px;
+    }
+
+    &.lSNext {
+        background-position: 0;
+        right: -100px;
+    }
+}
+
 // === / Mixins ===
 
 // === / Header ===
