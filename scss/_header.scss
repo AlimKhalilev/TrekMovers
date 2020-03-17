@@ -15,6 +15,22 @@ body {
     font-weight: bold;
 }
 
+@mixin container-padding {
+    padding: 0 100px;
+
+    @media ($media_xl) {
+        padding: 0 60px;
+    }
+
+    @media ($media_lg) {
+        padding: 0 20px;
+    }
+
+    @media ($media_md) {
+        padding: 0;
+    }
+}
+
 button, input[type="submit"] {
     @include font-secondary;
     background-color: $color_yellow;
@@ -38,11 +54,19 @@ button, input[type="submit"] {
     &.lSPrev {
         transform: rotate(180deg);
         left: -100px;
+
+        @media ($media_lg) {
+            left: -70px;
+        }
     }
 
     &.lSNext {
         background-position: 0;
         right: -100px;
+
+        @media ($media_lg) {
+            right: -70px;
+        }
     }
 }
 
