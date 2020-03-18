@@ -89,6 +89,10 @@
                 text-align: center;
             }
 
+            @media ($media_xs) {
+                font-size: 40px;
+            }
+
         }
 
         > p {
@@ -161,6 +165,11 @@
             margin: 0;
             min-height: 450px;
             box-shadow: 0px 10px 20px rgba(206,206,206,0.5);
+        }
+
+        @media ($media_xs) {
+            width: 90%;
+            min-height: 470px;
         }
 
         &-top {
@@ -257,12 +266,6 @@
 .section-service {
     margin-bottom: 120px;
 
-    h1 {
-        @include font-header;
-        font-size: 45px;
-        line-height: 50px;
-        text-align: center;
-    }
 
     .section-inner {
 
@@ -295,11 +298,15 @@
             span {
                 @include font-secondary;
                 font-size: 20px;
-                line-height: 37px;
+                line-height: 20px;
                 color: #666666;
 
                 @media ($media_sm) {
                     font-size: 18px;
+                }
+
+                @media ($media_xs) {
+                    font-size: 15px;
                 }
             }
         }
@@ -316,6 +323,11 @@
         @media ($media_lg) {
             grid-template-columns: 1fr 1fr;
             column-gap: 60px;
+        }
+
+        @media ($media_xs) {
+            grid-auto-flow: row;
+            grid-template-columns: 1fr;
         }
 
         &-block {
@@ -380,10 +392,6 @@
     }
 
     h1 {
-        @include font-header;
-        font-size: 45px;
-        line-height: 50px;
-        text-align: center;
         margin-bottom: 50px;
     }
     
@@ -397,6 +405,13 @@
                 max-width: 100%;
             }
         }
+
+        @media ($media_xs) {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-gap: 30px;
+            justify-items: center;
+        }
     }
 }
 
@@ -409,16 +424,20 @@
     background-color: $color_section;
     padding: 100px 0;
 
+    @media ($media_xs) {
+        padding: 60px 0;
+    }
+
     .section-inner {
         
     }
 
     h1 {
-        @include font-header;
-        font-size: 45px;
-        line-height: 50px;
-        text-align: center;
         margin-bottom: 100px;
+
+        @media ($media_xs) {
+            margin-bottom: 60px;
+        }
     }
 
     &-cards {
@@ -456,6 +475,10 @@
 
             @media ($media_sm) {
                 min-width: 370px;
+            }
+
+            @media (max-width: 450px) {
+                min-width: 100%;
             }
     
 
@@ -587,10 +610,6 @@
     }
 
     h1 {
-        @include font-header;
-        font-size: 45px;
-        line-height: 50px;
-        text-align: center;
         margin-bottom: 50px;
     }
 
@@ -627,6 +646,11 @@
             display: grid;
             grid-template-columns: 1fr 1fr 1fr;
             grid-gap: 30px;
+            justify-items: center;
+        }
+
+        @media ($media_xs) {
+            grid-template-columns: 1fr 1fr;
         }
     }
 }
@@ -671,10 +695,6 @@
     }
 
     h1 {
-        @include font-header;
-        font-size: 45px;
-        line-height: 50px;
-        text-align: center;
         margin-bottom: 60px;
     }
     
@@ -733,10 +753,6 @@
     }
 
     h1 {
-        @include font-header;
-        font-size: 45px;
-        line-height: 50px;
-        text-align: center;
         margin-bottom: 60px;
     }
 
@@ -780,6 +796,10 @@
 
                 &-stars {
                     margin-right: 20px;
+                }
+
+                &-logo {
+                    height: 20px;
                 }
             }
 
@@ -876,6 +896,10 @@
             @media ($media_sm) {
                 font-size: 25px;
             }
+
+            @media ($media_xs) {
+                font-size: 20px;
+            }
         }
 
         button {
@@ -894,6 +918,11 @@
             @media ($media_sm) {
                 padding: 12px 45px;
                 font-size: 15px;
+            }
+
+            @media ($media_xs) {
+                padding: 10px 30px;
+                font-size: 12px;
             }
             
         }
@@ -926,10 +955,6 @@
     }
 
     h1 {
-        @include font-header;
-        font-size: 45px;
-        line-height: 50px;
-        text-align: center;
         margin-bottom: 80px;
     }
 
@@ -996,6 +1021,10 @@
 
                             @media ($media_sm) {
                                 margin-right: 100px;
+                            }
+
+                            @media ($media_sm) {
+                                margin-right: 70px;
                             }
                         }
                     }

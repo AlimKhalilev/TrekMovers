@@ -38,6 +38,10 @@
                 justify-content: space-between;
             }
 
+            @media ($media_xs) {
+                flex-direction: column;
+            }
+
             &-item {
                 margin-right: 50px;
 
@@ -48,6 +52,10 @@
                 @media ($media_sm) {
                     margin: 0;
                 }
+
+                @media ($media_xs) {
+                    margin: 15px 0;
+                }    
 
                 h3 {
                     @include font-header;
@@ -89,6 +97,10 @@
 
                 @media ($media_sm) {
                     width: 50px;
+                }
+
+                @media ($media_xs) {
+                    width: 40px;
                 }
 
                 &:not(:last-child) {

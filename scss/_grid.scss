@@ -4,7 +4,7 @@ $screen_md: 992px + 60px; // laptop
 $screen_lg: 1280px; // notebooks
 $screen_xl: 1440px; // macbooks
 
-$screen_xs_container: 95%; // mobile
+$screen_xs_container: 95% - 5%; // mobile
 $screen_sm_container: 90%; // tablet
 $screen_md_container: 85%; // laptop
 $screen_lg_container: 950px; // notebooks
