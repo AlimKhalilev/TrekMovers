@@ -188,16 +188,18 @@ button, input[type="submit"] {
 
             input:checked ~ span {
                 background-color: $color_subheader;
-                width: 26px;
+                width: 27px;
                 margin: 0;
             }
 
             input:checked ~ #span1 {
-                transform: rotate(45deg) translateX(2px) translateY(-4px);
+                transform: rotate(135deg) translate(1px, 1px);
+                transform-origin: bottom;
             }
 
             input:checked ~ #span2 {
-                transform: rotate(495deg) translate(0px);
+                transform: rotate(45deg) translate(1px, -1px);
+                transform-origin: top;
             }
 
             input:checked ~ #span3 {
