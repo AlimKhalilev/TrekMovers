@@ -1,4 +1,20 @@
 $(document).ready(function() {
+    var button = $(".close_button");
+    var navbar = $(".section-subheader");
+    var body = $("body");
+
+    $(button).click(function () {
+    
+        if (!navbar.is(':visible')) {
+            navbar.slideDown('normal');
+            body.css("overflow-y", "hidden");
+        } 
+        else {
+            navbar.slideUp('normal');
+            body.css("overflow-y", "");
+        }
+    });
+
     $('#work-slider').lightSlider({
         item:2,
         loop:false,

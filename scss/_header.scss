@@ -102,6 +102,10 @@ button, input[type="submit"] {
         align-items: center;
     }
 
+    @media ($media_sm) {
+        border-bottom: 2px solid $color_section;
+    }
+
     &-logo {
         img {
             height: 25px;
@@ -136,6 +140,78 @@ button, input[type="submit"] {
         &-button {
 
         }
+
+        @media ($media_sm) {
+            display: none;
+        }
+    }
+
+    &-button {
+        display: none;
+
+        @media ($media_sm) {
+            display: block;
+        }
+        .close_button {
+            overflow: hidden;
+            width: 21px;
+            height: 21px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin-top: 1px;
+
+            input {
+                display: flex;
+                width: 21px;
+                height: 21px;
+                position: absolute;
+                cursor: pointer;
+                opacity: 0;
+                z-index: 1;
+            }
+
+            input:checked ~ span {
+                background-color: $color_subheader;
+                width: 26px;
+                margin: 0;
+            }
+
+            input:checked ~ #span1 {
+                transform: rotate(45deg) translateX(2px) translateY(-4px);
+            }
+
+            input:checked ~ #span2 {
+                transform: rotate(495deg) translate(0px);
+            }
+
+            input:checked ~ #span3 {
+                transform: rotate(45deg);
+                opacity: 0;
+            }
+              
+            span {
+                width: 21px;
+                height: 4px;
+                margin-bottom: 4px;
+                background: $color_header;
+                border-radius: 4px;
+                transition: all .5s cubic-bezier(.08,.81,.87,.71);
+            }
+
+            span:last-child {
+                margin-bottom: 0;
+            }
+
+            #span1 {
+                transform-origin: 4px 0px;
+            }
+
+            #span3 {
+                transform-origin: bottom right;
+            }
+        }
     }
 }
 // === / Header ===
@@ -146,16 +222,32 @@ button, input[type="submit"] {
 .section-subheader {
     background-color: $color_section;
 
+    @media ($media_sm) {
+        display: none;
+    }
+
     .section-inner {
         height: 80px;
         display: flex;
         justify-content: space-between;
         align-items: center;
+
+        @media ($media_sm) {
+            height: auto;
+            flex-direction: column;
+            align-items: flex-start;
+            padding: 20px 0;
+        }
     }
 
     &-nav {
         ul {
             display: flex;
+
+            @media ($media_sm) {
+                flex-direction: column;
+            }
+            
 
             li {
                 &:not(:last-child) {
@@ -182,6 +274,10 @@ button, input[type="submit"] {
                         border-bottom: 2px solid $color_yellow;
                     }
                 }
+
+                @media ($media_sm) {
+                    margin: 20px 0;
+                }
             }
         }
     }
@@ -199,6 +295,11 @@ button, input[type="submit"] {
                 flex-direction: column;
             }
 
+            @media ($media_sm) {
+                flex-direction: row;
+                margin: 10px 0;
+            }
+
             &-block {
                 display: flex;
                 color: #AB9478;
@@ -208,7 +309,10 @@ button, input[type="submit"] {
                 @media ($media_md) {
                     margin: 5px 0 0 0;
                 }
-    
+
+                @media ($media_sm) {
+                    margin: 0 0 0 20px;
+                }  
 
                 img {
                     margin-right: 5px;
@@ -218,6 +322,53 @@ button, input[type="submit"] {
                     border-bottom: 1px solid #AB9478;
                 }
             }
+        }
+    }
+
+
+    &-info {
+        display: none;
+
+        &-phone {
+            align-self: flex-start;
+            margin-top: 8px;
+
+            @media ($media_sm) {
+                margin-top: 28px;
+            }
+        }
+
+        &-text {
+            margin: 0 25px 0 20px;
+
+            &-top {
+                @include font-header;
+                font-size: 24px;
+                line-height: 36px;
+            }
+
+            &-bottom {
+                @include font-header;
+                font-size: 12px;
+                line-height: 12px;
+            }
+
+            @media ($media_sm) {
+                order: -1;
+                margin: 20px 25px 20px 0;
+            }
+        }
+
+        &-button {
+            @media ($media_sm) {
+                width: 100%;
+            }
+        }
+
+        @media ($media_sm) {
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
         }
     }
 }
