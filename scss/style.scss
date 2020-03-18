@@ -297,6 +297,10 @@
                 font-size: 20px;
                 line-height: 37px;
                 color: #666666;
+
+                @media ($media_sm) {
+                    font-size: 18px;
+                }
             }
         }
     }
@@ -432,6 +436,10 @@
             grid-gap: 60px;
         }
 
+        @media ($media_sm) {
+            grid-template-columns: 1fr;
+        }
+
         &-card {
             position: relative;
             background-color: #fff;
@@ -444,6 +452,10 @@
 
             @media ($media_md) {
                 min-width: 100%;
+            }
+
+            @media ($media_sm) {
+                min-width: 370px;
             }
     
 
@@ -500,6 +512,11 @@
                     height: 130px;
                     font-size: 12px;
                     background-position: center;
+                }
+
+                @media ($media_sm) {
+                    height: 140px;
+                    font-size: 14px;
                 }
 
                 &-left {
@@ -605,6 +622,12 @@
                 max-width: 100%;
             }
         }
+
+        @media ($media_sm) {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-gap: 30px;
+        }
     }
 }
 
@@ -618,6 +641,29 @@
 
     .lSPager {
         display: none;
+
+        @media ($media_sm) {
+            display: block;
+        }
+    }
+
+    @media ($media_md) {
+        .lSAction > .lSPrev, .lSAction > .lSNext {
+            top: 0;
+            margin: -110px 0 0 0;
+        }
+        .lSAction > .lSPrev {
+            left: 0;
+        }
+        .lSAction > .lSNext {
+            right: 0;
+        }
+    }
+
+    @media ($media_sm) {
+        .lSAction > .lSPrev, .lSAction > .lSNext {
+            display: none;
+        }
     }
 
     .section-inner {
@@ -668,26 +714,16 @@
         margin-bottom: 80px;
     }
 
-    .lSPrev, .lSNext {
-        margin-top: -40px;
+    @media ($media_sm) {
+        margin-bottom: 0;
+        padding: 80px 0 120px 0;
     }
 
-    .lSPager.lSpg {
-        li {
-            a {
-                background-color: #C4C4C4;
-                transition: none;
-            }
+    .lSPrev, .lSNext {
+        margin-top: -40px;
 
-            &.active, &:hover {
-                a {
-                    background-color: #fff;
-                    border: 2px solid $color_yellow;
-                    width: 10px;
-                    height: 10px;
-                    margin-bottom: -1px;
-                }
-            }
+        @media ($media_md) {
+            display: none;
         }
     }
 
@@ -720,6 +756,14 @@
 
         @media ($media_md) {
             right: 0px;
+            padding: 15px 30px;
+        }
+
+        @media ($media_sm) {
+            bottom: -80px;
+            top: auto;
+            right: 50%;
+            transform: translateX(50%);
         }
     }
     
@@ -795,6 +839,10 @@
         @media ($media_lg) {
             height: 140px;
         }
+
+        @media ($media_md) {
+            height: 100px;
+        }
     }
 
     &-content {
@@ -807,6 +855,10 @@
             width: 48%;
         }
 
+        @media ($media_sm) {
+            width: 100%;
+        }
+
         h2 {
             @include font-header;
             font-size: 28px;
@@ -814,6 +866,14 @@
             color: #fff;
 
             @media ($media_lg) {
+                font-size: 25px;
+            }
+
+            @media ($media_md) {
+                font-size: 20px;
+            }
+
+            @media ($media_sm) {
                 font-size: 25px;
             }
         }
@@ -825,10 +885,25 @@
             @media ($media_lg) {
                 padding: 12px 45px;
             }
+
+            @media ($media_md) {
+                padding: 10px 30px;
+                font-size: 12px;
+            }
+
+            @media ($media_sm) {
+                padding: 12px 45px;
+                font-size: 15px;
+            }
+            
         }
     }
 
     &-image {
+
+        @media ($media_sm) {
+            display: none;
+        }
 
         img {
             width: 50%;
@@ -862,7 +937,20 @@
         display: flex;
         justify-content: space-between;
 
+        @media ($media_md) {
+            flex-direction: column;
+        }
+
         &-left {
+
+            @media ($media_md) {
+                display: flex;
+                justify-content: space-around;
+            }
+
+            @media ($media_sm) {
+                flex-direction: column;
+            }
 
             &-container {
 
@@ -901,6 +989,14 @@
                             @media ($media_lg) {
                                 margin-right: 100px;
                             }
+
+                            @media ($media_md) {
+                                margin-right: 70px;
+                            }
+
+                            @media ($media_sm) {
+                                margin-right: 100px;
+                            }
                         }
                     }
 
@@ -922,6 +1018,16 @@
         &-right {
             @media ($media_lg) {
                 width: 55%;
+            }
+
+            @media ($media_md) {
+                width: 100%;
+                text-align: center;
+
+                @media ($media_sm) {
+                    text-align: left;
+                    margin-top: 40px;
+                }
             }
 
             img {

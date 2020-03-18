@@ -70,6 +70,25 @@ button, input[type="submit"] {
     }
 }
 
+.lSSlideOuter .lSPager.lSpg {
+    li {
+        a {
+            background-color: #C4C4C4;
+            transition: none;
+        }
+
+        &.active, &:hover {
+            a {
+                background-color: #fff;
+                border: 2px solid $color_yellow;
+                width: 10px;
+                height: 10px;
+                margin-bottom: -1px;
+            }
+        }
+    }
+}
+
 // === / Mixins ===
 
 // === / Header ===
@@ -141,6 +160,10 @@ button, input[type="submit"] {
             li {
                 &:not(:last-child) {
                     margin-right: 40px;
+
+                    @media ($media_md) {
+                        margin-right: 30px;
+                    }
                 }
 
                 a {
@@ -172,11 +195,20 @@ button, input[type="submit"] {
             font-size: 14px;
             line-height: 21px;
 
+            @media ($media_md) {
+                flex-direction: column;
+            }
+
             &-block {
                 display: flex;
                 color: #AB9478;
                 margin-left: 20px;
                 cursor: pointer;
+
+                @media ($media_md) {
+                    margin: 5px 0 0 0;
+                }
+    
 
                 img {
                     margin-right: 5px;

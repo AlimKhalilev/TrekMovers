@@ -8,6 +8,10 @@
         padding: 50px 0;
         display: flex;
         justify-content: space-between;
+
+        @media ($media_sm) {
+            flex-direction: column;
+        }
     }
 
     &-left {
@@ -23,11 +27,26 @@
             display: flex;
             margin: 40px 0 50px 0;
 
+
+            @media ($media_md) {
+                margin: 50px 0 60px 0;
+            }
+
+            @media ($media_sm) {
+                margin: 40px 0 50px 0;
+                display: flex;
+                justify-content: space-between;
+            }
+
             &-item {
                 margin-right: 50px;
 
                 @media ($media_xl) {
                     margin-right: 30px;
+                }
+
+                @media ($media_sm) {
+                    margin: 0;
                 }
 
                 h3 {
@@ -53,6 +72,10 @@
                 font-size: 16px;
                 line-height: 12px;
             }
+
+            @media ($media_md) {
+                margin: 20px 0;
+            }
         }
 
         &-icons {
@@ -60,9 +83,27 @@
                 width: 50px;
                 margin-top: 40px;
 
+                @media ($media_md) {
+                    width: 45px;
+                }
+
+                @media ($media_sm) {
+                    width: 50px;
+                }
+
                 &:not(:last-child) {
                     margin-right: 10px;
+
+                    @media ($media_sm) {
+                        margin-right: 0;
+                    }
                 }
+            }
+
+            @media ($media_sm) {
+                display: flex;
+                justify-content: space-evenly;
+                margin-bottom: 40px;
             }
         }
     }
@@ -81,6 +122,10 @@
             input, textarea {
                 border: none;
                 padding: 14px 18px;
+
+                @media ($media_md) {
+                    padding: 12px 18px;
+                }
             }
 
             textarea {
@@ -106,6 +151,14 @@
                     grid-column-end: 3;
                 }
             }
+
+            @media ($media_md) {
+                grid-template-columns: 1fr;
+
+                input[type="email"], textarea {
+                    grid-column: auto;
+                }
+            }
         }
 
         &-button {
@@ -116,6 +169,18 @@
             text-align: right;
             color: $color_subheader;
             font-size: 14px;
+
+            @media ($media_sm) {
+                margin-top: 20px;
+            }
+        }
+
+        @media ($media_md) {
+            width: 50%;
+        }
+
+        @media ($media_sm) {
+            width: 100%;
         }
 
     }
