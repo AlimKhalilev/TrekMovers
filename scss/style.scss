@@ -7,7 +7,7 @@
 // === Promo ===
 
 .section-promo {
-    background-image: url(/dist/img/promo-background.webp);
+    background-image: url(../img/promo-background.webp);
     background-size: cover;
     height: 650px;
     background-position: left center;
@@ -234,7 +234,7 @@
                     &-input::before {
                         content: '';
                         position: absolute;
-                        background-image: url(/dist/img/search.svg);
+                        background-image: url(../img/search.svg);
                         top: 10px;
                         right: 5px;
                         width: 16px;
@@ -563,7 +563,7 @@
 
                 @for $i from 1 through 4 {
                     &.header-#{$i} {
-                      background-image: url(/dist/img/rates-card-#{$i}.webp);
+                      background-image: url(../img/rates-card-#{$i}.webp);
                     }
                   }
             }
